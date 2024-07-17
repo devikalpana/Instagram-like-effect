@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: blanchedalmond;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.heart-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 100px;
+    height: 100px;
+    background: url('heart-2-fill.png') no-repeat center center;
+    background-size: contain;
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.heart-overlay.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
